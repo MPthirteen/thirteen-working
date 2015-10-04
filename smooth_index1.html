@@ -1,0 +1,390 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<hr />
+
+<style>
+
+@charset "utf-8";
+/* CSS Document */
+
+.description, .file {border-radius: 10px;border: 2px solid;padding: 0 0 5px;}
+.description {margin-top:10px;}
+.description h1{color:#fff;background-color: #555;border-radius: 5px;margin: 0;padding: 5px;}
+.description p{padding:5px;}
+
+textarea, input{
+background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;}
+
+textarea:focus, input:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    outline: 0 none;
+}
+
+.sub-button{
+ text-decoration:none; 
+ text-align:center; 
+ padding:11px 32px; 
+ border:solid 1px #004F72; 
+ -webkit-border-radius:4px;
+ -moz-border-radius:4px; 
+ border-radius: 4px; 
+ font:18px Arial, Helvetica, sans-serif; 
+ font-weight:bold; 
+ color:#E5FFFF; 
+ background-color:#3BA4C7; 
+ background-image: -moz-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -o-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#1982A5 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982A5', endColorstr='#1982A5',GradientType=0 ); 
+ background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);   
+ -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
+  
+  }
+
+body {margin:0px;}
+
+body > .navbar {
+    font-size: 13px;
+}
+
+.navbar-fixed-top {
+    top: 0;
+}
+.navbar-fixed-top, .navbar-fixed-bottom {
+    left: 0;
+    margin-bottom: 0;
+    position: fixed;
+    right: 0;
+    z-index: 1030;
+}
+
+.navbar {
+    margin-bottom: 20px;
+    overflow: visible;
+}
+
+.navbar-inner:before, .navbar-inner:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.navbar-inner:after {
+    clear: both;
+}
+
+.navbar-inner:before, .navbar-inner:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.navbar-inverse .navbar-inner {
+    background-color: #1B1B1B;
+    background-image: linear-gradient(to bottom, #222222, #111111);
+    background-repeat: repeat-x;
+    border-color: #252525;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
+    border-width: 0 0 1px;
+}
+
+.navbar-inner {
+    background-color: #FAFAFA;
+    background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);
+    background-repeat: repeat-x;
+    border: 1px solid #D4D4D4;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    min-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container:before, .container:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.container:after {
+    clear: both;
+}
+
+.container:before, .container:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 1170px;
+}
+
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.nav-collapse.collapse {
+    height: auto;
+    overflow: visible;
+}
+
+.collapse {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: height 0.35s ease 0s;
+}
+
+.nav-collapse ul {
+  text-align: left;
+  color:#ffffff;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.nav-collapse ul li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.nav-collapse ul li:hover {
+  background: #555;
+  color: #fff;
+}
+.nav-collapse ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+.nav-collapse ul li ul li { 
+  background: #555; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+.nav-collapse ul li ul li:hover { background: #666; }
+.nav-collapse ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar a{text-decoration: none;color: #FFFFFF;}
+
+.mainwrap{padding-top:50px;margin-left:10px;}
+
+.mainfoot{background-color:#666;width:100%;height:250px;}
+
+body {
+	margin:0;
+	font:40px Arial, Helvetica, sans-serif;
+}
+
+section {
+	display: block;
+	background-color: #C9F;
+	height:1500px;
+	padding: 120px;
+}
+
+#home {
+	background: #99F;
+	font-weight:bold;
+	color:#FFF;
+}
+
+#about {
+	background:#96F;
+	font-weight:bold;
+	color:#FFF;
+}
+
+#classes {
+	background: #99F;
+	font-weight:bold;
+	color:#FFF;
+}
+
+#rental {
+	background:#96F;
+	font-weight:bold;
+	color:#FFF;
+}
+
+#media {
+	background: #99F;
+	font-weight:bold;
+	color:#FFF;
+}
+
+#contact {
+	background:#96F;
+	font-weight:bold;
+	color:#FFF;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  function filterPath(string) {
+  return string
+    .replace(/^\//,'')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+    .replace(/\/$/,'');
+  }
+  var locationPath = filterPath(location.pathname);
+  var scrollElem = scrollableElement('html', 'body');
+ 
+  $('a[href*=#]').each(function() {
+    var thisPath = filterPath(this.pathname) || locationPath;
+    if (  locationPath == thisPath
+    && (location.hostname == this.hostname || !this.hostname)
+    && this.hash.replace(/#/,'') ) {
+      var $target = $(this.hash), target = this.hash;
+      if (target) {
+        var targetOffset = $target.offset().top;
+        $(this).click(function(event) {
+          event.preventDefault();
+          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+            location.hash = target;
+          });
+        });
+      }
+    }
+  });
+ 
+  // use the first element that is "scrollable"
+  function scrollableElement(els) {
+    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+      var el = arguments[i],
+          $scrollElement = $(el);
+      if ($scrollElement.scrollTop()> 0) {
+        return el;
+      } else {
+        $scrollElement.scrollTop(1);
+        var isScrollable = $scrollElement.scrollTop()> 0;
+        $scrollElement.scrollTop(0);
+        if (isScrollable) {
+          return el;
+        }
+      }
+    }
+    return [];
+  }
+ 
+});
+</script>
+
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          
+          
+          <div class="nav-collapse collapse">
+
+<ul>
+<li><a href="#home">Home</a></li>
+ <li><a href="#about">About</a>
+    <ul>
+      <li><a href="#">Our Instructors</a></li>
+      <li><a href="#">Our Studio Policy</a></li>
+      <li><a href="#">Member's Benefits</a></li>
+    </ul>
+  </li>
+  
+  <li><a href="#classes">Classes</a>
+    <ul>
+      <li><a href="#">Schedule</a></li>
+      <li><a href="#">Pricing</a></li>
+    </ul>
+  </li>
+
+<li><a href="#rental">Studio Rental</a></li>
+
+<li><a href="#media">Media</a></li>
+
+<li><a href="#contact">Contact</a>
+    <ul>
+      <li><a href="#">Locate Us</a></li>
+      <li><a href="#">Ask Us</a></li>
+    </ul>
+  </li>
+  </li>
+</ul>
+          </div>
+        </div>
+      </div>
+    </div>
+<section id="home">Home</section>
+<section id="about">About</section>
+<section id="classes">Classes</section>
+<section id="rental"> Studio Rental</section>
+<section id="media">Media</section>
+<section id="contact">Contact</section>
+</body>
+</html>
